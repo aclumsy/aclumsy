@@ -1,19 +1,22 @@
-### Hi there 👋
+# Aclumsy
+![logo](/doc/logo.png)
 
 
 
-<!--
-**aclumsy/aclumsy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
 
-- 🔭 I’m currently working on .![高清logo透明底原色字](https://user-images.githubusercontent.com/62738624/184504203-91b0aeb4-7c74-4cb3-b2d4-5226237a1194.png)
-..
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+
+
+
+
+
+
+
+<style>
+    img[alt="logo"]{
+        width: 200px;
+    }
+</style>
+
+
