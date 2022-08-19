@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 封装了一些组件的starters -->
+    <parent>
+        <groupId>cn.aclumsy.framework</groupId>
+        <artifactId>aclumsy-framework</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <artifactId>aclumsy-framework-starters</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>aclumsy-framework-starter-web</module>
+        <module>aclumsy-framework-starter-redis</module>
+        <module>aclumsy-framework-starter-nacos</module>
+        <module>aclumsy-framework-starter-swagger</module>
+    </modules>
+</project>

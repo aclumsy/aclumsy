@@ -1,0 +1,13 @@
+spring:
+    application:
+        name: aclumsy-business-demo2
+server:
+    servlet:
+        context-path: /demo2
+    port: 9000
+
+aclumsy:
+  swagger:
+    title: 用户中心
+    description: 提供用户中心的所有功能
+    version: 1.0.0

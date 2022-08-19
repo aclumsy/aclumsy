@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    cn.aclumsy.framework.common.config.MessageSourceConfiguration,\
+    cn.aclumsy.framework.common.context.SpringApplicationContext,\
+    cn.aclumsy.framework.common.context.MessageSourceUtil

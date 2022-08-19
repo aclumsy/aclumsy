@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.aclumsy.framework.swagger.config.SwaggerConfiguration,\
+  cn.aclumsy.framework.swagger.console.SwaggerConsole

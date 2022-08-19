@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 统一依赖管理 -->
+    <groupId>cn.aclumsy.framework</groupId>
+    <artifactId>aclumsy-framework-dependencies</artifactId>
+    <version>${aclumsy-framework-dependencies.version}</version>
+    <packaging>pom</packaging>
+
+    <!-- 统一属性管理 -->
+    <properties>
+        <!-- 版本依赖管理器版本号 -->
+        <aclumsy-framework-dependencies.version>1.0.0</aclumsy-framework-dependencies.version>
+        <!-- Aclumsy 版本号 -->
+        <aclumsy-framework.version>1.0.0</aclumsy-framework.version>
+        <!-- Spring依赖 START -->
+        <!-- SpringBoot, SpringCloud, SpringCloud Alibaba 版本对照说明 https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E -->
+        <spring-boot.version>2.5.6</spring-boot.version>
+        <spring-cloud.version>2020.0.4</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+        <!-- Spring依赖 END -->
+
+        <!-- 数据库依赖 START -->
+        <mysql.version>8.0.29</mysql.version>
+        <druid.version>1.2.11</druid.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <redisson.version>3.17.4</redisson.version>
+        <!-- 数据库依赖 END -->
+
+        <!-- 基础组件 START -->
+        <knife4j.version>3.0.3</knife4j.version>
+        <swagger-annotations.version>1.6.6</swagger-annotations.version>
+        <swagger-v3-annotations.version>2.2.0</swagger-v3-annotations.version>
+        <hibernate.validator.version>6.2.0.Final</hibernate.validator.version>
+        <jwt.version>0.9.1</jwt.version>
+        <easyexcel.version>3.1.1</easyexcel.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <skywalking.version>8.6.0</skywalking.version>
+        <weixin-java.version>4.3.0</weixin-java.version>
+        <IJPay.version>2.8.1</IJPay.version>
+        <jeepay.version>1.6.0</jeepay.version>
+        <kuaidi100.version>1.0.8</kuaidi100.version>
+        <aliyun-oss.version>3.15.1</aliyun-oss.version>
+        <aliyun-dysmsapi.version>2.0.9</aliyun-dysmsapi.version>
+        <okhttps.version>3.5.2</okhttps.version>
+        <fastjson2.version>2.0.10</fastjson2.version>
+        <gson.version>2.9.0</gson.version>
+        <guava.version>30.1.1-jre</guava.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <commons-text.version>1.3</commons-text.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
+        <hutool.version>5.8.5</hutool.version>
+        <lombok.version>1.18.24</lombok.version>
+        <jetbrains-annotations.version>23.0.0</jetbrains-annotations.version>
+        <!-- 基础组件 END -->
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- 统一依赖管理 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring依赖 START -->
+            <!-- SpringBoot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- SpringCloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- SpringCloud Alibaba -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring依赖 END -->
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>2.7.7</version>
+            </dependency>
+
+            <!-- 数据库依赖 START -->
+            <!-- MySQL -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!-- Druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!-- MyBatis-Plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <!-- 数据库依赖 END -->
+
+            <!-- 项目依赖 START -->
+            <dependency>
+                <groupId>cn.aclumsy.framework</groupId>
+                <artifactId>aclumsy-frammework-common</artifactId>
+                <version>${aclumsy-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.aclumsy.framework</groupId>
+                <artifactId>aclumsy-framework-starter-web</artifactId>
+                <version>${aclumsy-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.aclumsy.framework</groupId>
+                <artifactId>aclumsy-framework-starter-redis</artifactId>
+                <version>${aclumsy-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.aclumsy.framework</groupId>
+                <artifactId>aclumsy-framework-starter-nacos</artifactId>
+                <version>${aclumsy-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.aclumsy.framework</groupId>
+                <artifactId>aclumsy-framework-starter-mysql</artifactId>
+                <version>${aclumsy-framework.version}</version>
+            </dependency>
+            <!-- 项目依赖 END -->
+
+            <!-- 基础组件 START -->
+            <!--  knife4j Api文档 -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <!-- swagger-annotations -->
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-v3-annotations.version}</version>
+            </dependency>
+            <!-- hibernate-validator -->
+            <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate.validator.version}</version>
+            </dependency>
+            <!-- jwt -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jwt.version}</version>
+            </dependency>
+            <!-- easy excel  -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+            <!-- 类转换工具 -->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <!-- 链路追踪 -->
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-logback-1.x</artifactId>
+                <version>${skywalking.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-trace</artifactId>
+                <version>${skywalking.version}</version>
+            </dependency>
+            <!-- 微信授权 -->
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-mp</artifactId>
+                <version>${weixin-java.version}</version>
+            </dependency>
+            <!-- 支付 -->
+            <dependency>
+                <groupId>com.github.javen205</groupId>
+                <artifactId>IJPay-WxPay</artifactId>
+                <version>${IJPay.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.javen205</groupId>
+                <artifactId>IJPay-AliPay</artifactId>
+                <version>${IJPay.version}</version>
+            </dependency>
+            <!-- jeePay -->
+            <dependency>
+                <groupId>com.jeequan</groupId>
+                <artifactId>jeepay-sdk-java</artifactId>
+                <version>${jeepay.version}</version>
+            </dependency>
+            <!-- 快递100 -->
+            <dependency>
+                <groupId>com.github.kuaidi100-api</groupId>
+                <artifactId>sdk</artifactId>
+                <version>${kuaidi100.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun-oss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>dysmsapi20170525</artifactId>
+                <version>${aliyun-dysmsapi.version}</version>
+            </dependency>
+            <!--http工具 https://okhttps.ejlchina.com/v3/introduction.html-->
+            <dependency>
+                <groupId>com.ejlchina</groupId>
+                <artifactId>okhttps</artifactId>
+                <version>${okhttps.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ejlchina</groupId>
+                <artifactId>okhttps-fastjson</artifactId>
+                <version>${okhttps.version}</version>
+            </dependency>
+
+            <!-- fastJson2 -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+            <!-- gson -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <!-- google guava 工具包 -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <!-- commons-lang3 工具包 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <!-- commons-test 工具包 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-text</artifactId>
+                <version>${commons-text.version}</version>
+            </dependency>
+            <!-- commons-collections4 工具包 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
+            <!-- hutool -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <optional>true</optional>
+            </dependency>
+            <!-- jetbrains -->
+            <dependency>
+                <groupId>org.jetbrains</groupId>
+                <artifactId>annotations</artifactId>
+                <version>${jetbrains-annotations.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <!-- 基础组件 END -->
+        </dependencies>
+    </dependencyManagement>
+</project>

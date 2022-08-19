@@ -1,0 +1,29 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: @artifactId@
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          lower-case-service-id: true
+      routes:
+        # mallIm服务
+        - id: aclumsy-business-demo1
+          metadata:
+            swaggerTitle: 后台管理系统
+          uri: lb://aclumsy-business-demo1
+          predicates:
+            - Path=/demo1/**
+        # im中台服务
+        - id: aclumsy-business-demo2
+          metadata:
+            swaggerTitle: 用户中心系统
+          uri: lb://aclumsy-business-demo2
+          predicates:
+            - Path=/demo2/**

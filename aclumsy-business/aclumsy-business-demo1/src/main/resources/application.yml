@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: aclumsy-business-demo1
+server:
+    servlet:
+        context-path: /demo1
+aclumsy:
+  swagger:
+    title: 管理后台
+    description: 提供管理员管理的所有功能
+    version: 1.0.0

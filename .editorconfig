@@ -15,3 +15,7 @@ insert_final_newline = true
 # 删除一行中的前后空格
 trim_trailing_whitespace = true
 
+[{*.yml, *.yaml}]
+# 缩进的空格数
+indent_size = 2
+

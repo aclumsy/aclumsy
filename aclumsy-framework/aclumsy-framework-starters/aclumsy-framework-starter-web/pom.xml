@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 基于Spring的Web模块 -->
+    <parent>
+        <groupId>cn.aclumsy.framework</groupId>
+        <artifactId>aclumsy-framework-starters</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <artifactId>aclumsy-framework-starter-web</artifactId>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- 项目通用模块 -->
+        <dependency>
+            <groupId>cn.aclumsy.framework</groupId>
+            <artifactId>aclumsy-frammework-common</artifactId>
+        </dependency>
+        <!-- nacos 注册中心和配置中心 -->
+        <dependency>
+            <groupId>cn.aclumsy.framework</groupId>
+            <artifactId>aclumsy-framework-starter-nacos</artifactId>
+        </dependency>
+        <!-- 接口文档模块 -->
+        <dependency>
+            <groupId>cn.aclumsy.framework</groupId>
+            <artifactId>aclumsy-framework-starter-swagger</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!-- SpringBoot Web Starter 模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- aop切面 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <!--监控运维-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!-- 读取 bootstrap 配置文件 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <!-- 熔断限流降级 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <!-- easy excel -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+        </dependency>
+        <!-- token -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,4 @@
+# PropertySource Loaders
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.aclumsy.framework.redis.config.RedisCacheAutoConfiguration,\
+cn.aclumsy.framework.redis.config.RedissonAutoConfiguration
